@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#157878">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/home.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="sticker.css" media="screen">
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+    <title>H | Sticker</title>
+
+</head>
+<body>
+    <section id="app">
+        <section class="page-header">
+            <h1 class="project-name">Random Picture</h1>
+            <h2 class="project-tagline">A web laboratory，just make fun.</h2>
+            <a href="https://github.com/hymanme/laboratory/sticker" class="btn">View on GitHub</a>
+            <button @click="onRefresh" class="btn">Refresh</button>
+        </section>
+        
+        <section class="main-content">
+            <a v-for="(item, index) in images" :key="index" class="item" :href="item.source" target="_blank">
+                <img :src="item.thumbnail"/>
+            </a>
+        </section>
+    </section>
+
+    <script type="text/javascript" src="sticker.js"></script>
+</body>
+</html>
